@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Inicio</string>
+    <string name="strCrear_Cuenta"><u>Crear Cuenta</u></string>
+    <string name="strOlvidar"><u>Olvidé contraseña</u></string>
+</resources>

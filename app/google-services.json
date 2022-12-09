@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1054282781307",
+    "project_id": "registro-4cdd7",
+    "storage_bucket": "registro-4cdd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054282781307:android:6332a1a31b0c21ed7708de",
+        "android_client_info": {
+          "package_name": "com.example.inicio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054282781307-i92jimu1dgbs6peh15ddpucd8407e7ti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.inicio",
+            "certificate_hash": "f4c8778a6c56dd81aacb16415ac45f65a7ec9951"
+          }
+        },
+        {
+          "client_id": "1054282781307-es73lb4lgjnr02e7p20shukqith3ntij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXJ-kSith6RA6LaOExg2aBojSHvoVlyYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054282781307-es73lb4lgjnr02e7p20shukqith3ntij.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
