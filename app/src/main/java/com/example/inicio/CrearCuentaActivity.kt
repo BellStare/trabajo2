@@ -1,6 +1,7 @@
 package com.example.inicio
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -31,43 +32,31 @@ class CrearCuentaActivity : AppCompatActivity() {
             var pass2 = txtpassword2.text.toString()
 
             if(pass1.equals(pass2)){
-
                 createAccount(txtemail_nuevo.text.toString(), txtpassword1.text.toString())
-
+                //Despues de crear una cuenta se muestra mensaje y se cmabia al login
+                val i = Intent(this, MainActivity::class.java)
+                Toast.makeText(baseContext,"Registrado correctamente", Toast.LENGTH_SHORT).show()
+                Thread.sleep(500)
+                startActivity(i)
             }
-
             else{
-
                 Toast.makeText(baseContext, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
                 txtpassword1.requestFocus()
             }
 
         }
-
-
-
-
-
-
-
         firebaseAuth = Firebase.auth
     }
 
     private fun createAccount(email : String, password : String){
-
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
-
             if(task.isSuccessful){
                 Toast.makeText(baseContext,"Cuenta creada correctamente", Toast.LENGTH_SHORT).show()
             }
-
             else{
                 Toast.makeText(baseContext,"Error en la creación" + task.exception, Toast.LENGTH_SHORT).show()
             }
-
-
         }
-
     }
 
 }

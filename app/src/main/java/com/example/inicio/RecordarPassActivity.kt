@@ -1,5 +1,6 @@
 package com.example.inicio
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -24,23 +25,20 @@ class RecordarPassActivity : AppCompatActivity() {
         btnCambiar.setOnClickListener(){
             reseteoContra(txtemail.text.toString())
         }
-
         firebaseAuth = Firebase.auth
     }
-
 
     private fun reseteoContra(email: String){
         firebaseAuth.sendPasswordResetEmail(email). addOnCompleteListener { task ->
             if(task.isSuccessful){
-
-                Toast.makeText(baseContext,"Se envió el correo de restablecimiento", Toast.LENGTH_SHORT).show()
+                val i = Intent(this, MainActivity::class.java)
+                Toast.makeText(baseContext,"Se envió el correo de restablecimiento, revise su bandeja de entrada", Toast.LENGTH_SHORT).show()
+                Thread.sleep(500)
+                startActivity(i)
             }
-
             else{
                 Toast.makeText(baseContext, "Ocurrió un error en el cambio", Toast.LENGTH_SHORT).show()
                 Toast.makeText(baseContext, "Éxito", Toast.LENGTH_SHORT).show()
-
-
             }
         }
     }
